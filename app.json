@@ -1,10 +1,15 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "xp",
+    "name": "Xpert Covid-19 Self Test",
+    "slug": "xpert-covid-19",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/splash/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -19,10 +24,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "net.triplearc.covid19"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "android": {
+      "package": "net.triplearc.covid19",
+      "splash": {
+        "mdpi": "./assets/images/splash/drawable-mdpi/screen.png",
+        "hdpi": "./assets/images/splash/drawable-hdpi/screen.png",
+        "xhdpi": "./assets/images/splash/drawable-xhdpi/screen.png",
+        "xxhdpi": "./assets/images/splash/drawable-xxhdpi/screen.png",
+        "xxxhdpi": "./assets/images/splash/drawable-xxxhdpi/screen.png",
+        "resizeMode": "cover"
+      }
+    },
+    "description": "This is a COVID-19 self assessment DEMO tool that was calibrated based on World Health Organization (WHO) guidelines."  
   }
 }

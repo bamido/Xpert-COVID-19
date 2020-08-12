@@ -9,6 +9,7 @@ import useColorScheme from '../hooks/useColorScheme';
 import HomeScreen from '../screens/HomeScreen';
 import QuizPlayScreen from '../screens/QuizPlayScreen';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import ImageHeader from '../components/ImageHeader';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -55,7 +56,17 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="HomeScreen"
         component={HomeScreen}
-        options={{ headerTitle: 'Xpert Covid-19 Self Test' }}
+        options={{ 
+          headerTitle: 'Xpert Covid-19 Self Test', 
+          headerStyle: {
+            backgroundColor: '#0199A6',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, 
+          
+        }}
       />
     </TabOneStack.Navigator>
   );
@@ -69,7 +80,17 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="QuizPlayScreen"
         component={QuizPlayScreen}
-        options={{ headerTitle: 'Xpert Covid-19 Self Test' }}
+        options={{ 
+          headerTitle: 'Xpert Covid-19 Self Test', 
+          headerStyle: {
+            backgroundColor: '#00B2C3',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, 
+          header: (props) => <ImageHeader {...props} />,
+        }}
       />
     </TabTwoStack.Navigator>
   );
